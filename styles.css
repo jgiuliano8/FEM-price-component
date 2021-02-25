@@ -1,0 +1,98 @@
+/* Styles for Single Price Component */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 100px;
+  font-family: Karla,sans-serif;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* helps center price component */
+}
+
+
+/* ============
+    Typography
+   ============ */
+
+.price-component__h2 {
+  color: #29A699;
+  border: 2px solid black;
+}
+
+.guarantee {
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+}
+
+.price-component__content {
+  color: hsl(218, 22%, 67%);
+}
+
+.subscription,
+.why {
+  color: hsl(204, 43%, 93%);
+}
+
+/* ========
+    Layout
+   ======== */
+
+.price-component {
+  border-radius: 7px;
+  background-color: white;
+  max-width: 550px;
+  padding: 0;
+}
+
+.price-component__h2,
+.guarantee,
+.price-component__content {
+  padding: 0 24px;
+  /* margin: 0; */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription {
+  background-color:  #29A699;
+  padding: 1.5em;
+}
+
+.why {
+  background-color: #4ABEBD;
+  margin: 0;
+  padding: 1.5em;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.why__unordered-list,
+.why__list-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 575px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 7px;
+  }
+
+  .why {
+    border-bottom-left-radius: 0px;
+  }
+}
