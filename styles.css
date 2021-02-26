@@ -8,12 +8,11 @@ body {
   margin: 0;
   padding: 100px;
   font-family: Karla,sans-serif;
-  background-color: lightgray;
+  background-color: #EEE;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* helps center price component */
 }
 
 
@@ -23,7 +22,6 @@ body {
 
 .price-component__h2 {
   color: #29A699;
-  border: 2px solid black;
 }
 
 .guarantee {
@@ -45,17 +43,30 @@ body {
    ======== */
 
 .price-component {
-  border-radius: 7px;
+  border-radius: 5px;
   background-color: white;
-  max-width: 550px;
+  max-width: 750px;
   padding: 0;
+  box-shadow: 0 0 15px 5px rgba(150,150,150,.2);
 }
 
-.price-component__h2,
+.price-component__h2 {
+  padding: 0 1.4em;
+}
+
 .guarantee,
 .price-component__content {
-  padding: 0 24px;
-  /* margin: 0; */
+  max-width: 550px;
+  padding: 0 2em;
+}
+
+.price-component__h2 {
+  margin-top: 1.5em;
+}
+
+.price-component__content {
+  margin-bottom: 2em;
+  line-height: 1.5;
 }
 
 .flex-container {
@@ -65,15 +76,20 @@ body {
 
 .subscription {
   background-color:  #29A699;
-  padding: 1.5em;
+  padding: 2em;
 }
 
 .why {
   background-color: #4ABEBD;
   margin: 0;
-  padding: 1.5em;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  padding: 2em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.why__h3,
+.subscription__heading {
+  margin-top: 0;
 }
 
 .why__unordered-list,
@@ -81,15 +97,60 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+  line-height: 1.4;
 }
+
+/* ============
+    Components
+   ============ */
+
+.subscription__pricing-p--large {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.CTA {
+  margin-top: 2em;
+}
+
+.CTA__anchor {
+  display: block;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  padding: .7em 1.3em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 0 0 15px 5px rgba(100,100,100,.35);
+}
+
+.CTA__anchor:hover,
+.CTA__anchor:focus {
+  transform: scale(1.1);
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 0 0 35px 5px rgba(100,100,100,.35);
+}
+
+/* ===============
+    Media Queries
+   =============== */
 
 @media screen and (min-width: 575px) {
   .flex-container {
     flex-direction: row;
   }
 
+  /* helps keep flex items full and evenly distributes the space */
+  .subscription,
+  .why {
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+
   .subscription {
-    border-bottom-left-radius: 7px;
+    border-bottom-left-radius: 5px;
   }
 
   .why {
