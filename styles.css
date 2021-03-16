@@ -137,6 +137,15 @@ body {
     Media Queries
    =============== */
 
+/* Added media query to remove padding on body for
+   very small/actual cellphone screens */
+
+@media screen and (max-width: 350px) {
+  body {
+    padding: 0;
+  }
+}
+
 @media screen and (min-width: 575px) {
   .flex-container {
     flex-direction: row;
