@@ -140,7 +140,7 @@ body {
 /* Added media query to remove padding on body for
    very small/actual cellphone screens */
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 425px) {
   body {
     padding: 0;
   }
